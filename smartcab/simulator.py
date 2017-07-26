@@ -183,6 +183,7 @@ class Simulator(object):
                         self.last_updated = self.current_time
                     
                     # Render text
+                    # print ("render text")
                     self.render_text(trial, testing)
 
                     # Render GUI and sleep
@@ -254,6 +255,7 @@ class Simulator(object):
             Simulated trial data will be rendered in the terminal/command prompt. """
 
         status = self.env.step_data
+        # print "=================state:{}".format(status)
         if status and status['waypoint'] is not None: # Continuing the trial
 
             # Previous State
